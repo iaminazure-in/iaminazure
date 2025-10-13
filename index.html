@@ -1,331 +1,453 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IaminAzure - Azure Consulting Services</title>
-	<style>
+    <title>IamInAzure - Optimize, Automate, and Transform with Microsoft Azure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F7FA; /* Background */
+            color: #2C3E50; /* Text */
         }
-
-        /* Header styling */
-        header {
-            background: white;
-            color: #0078D4;
-            padding: 0.5rem 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+        /* Using Accent color for main section headers */
+        main h2, main h3 {
+            color: #1A2B4C;
         }
-
-        header img {
-            height: 40px;
+        .hero-gradient {
+            /* Primary to Secondary Gradient */
+            background: linear-gradient(135deg, #0078D7 0%, #009688 100%);
         }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            gap: 1rem;
+        .zen-gradient-text {
+             /* Primary to Secondary Gradient */
+            background: linear-gradient(135deg, #0078D7 0%, #009688 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        nav a {
-            text-decoration: none;
-            color: #0078D4;
-            font-weight: bold;
-            cursor: pointer;
+        .cta-button-primary {
+            background-color: #0078D7; /* Primary */
+            transition: all 0.3s ease;
         }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 2rem auto;
+        .cta-button-primary:hover {
+            background-color: #009688; /* Secondary on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 120, 215, 0.3); /* Shadow matches Primary */
         }
-        .section {
-            margin-bottom: 2rem;
+        .cta-button-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid white;
+            transition: all 0.3s ease;
         }
-        .section img {
-            max-width: 100%;
-            border-radius: 10px;
-            
+        .cta-button-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
-        .numbers {
-            display: flex;
-            justify-content: space-around;
-            background: #f4f4f4;
-            padding: 2rem 0;
-            border-radius: 10px;
-            margin-bottom: 2rem;
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        .numbers div {
-            text-align: center;
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .numbers div h2 {
-            margin: 0;
-            color: #0078D4;
-            font-size: 2.5rem;
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .numbers div p {
-            margin: 0.5rem 0 0;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-        footer a {
-            color: #0078D4;
-            text-decoration: none;
-        }
-        .fun-facts {
-            background: #eaf4fc;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-        }
-        .fun-facts h2 {
-            text-align: center;
-            color: #0078D4;
-            margin-bottom: 1rem;
-        }
-        .fun-facts ul {
-            list-style: none;
-            padding: 0;
-        }
-        .fun-facts ul li {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-        .testimonials {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        .testimonials h2 {
-            text-align: center;
-            color: #0078D4;
-            margin-bottom: 1rem;
-        }
-        .testimonials p {
-            font-style: italic;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        .testimonials p strong {
-            display: block;
-            margin-top: 0.5rem;
-            color: #333;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-between;
-        }
-
-        .service-card {
-            background: #f4f4f4;
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1 1 calc(33% - 2rem);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-card img {
-            max-width: 80px;
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        .service-card h3 {
-            margin-bottom: 1rem;
-            color: #0078D4;
-        }
-
-        .service-card p {
-            font-size: 0.9rem;
-        }
-        /* Hamburger menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 25px;
-            height: 3px;
-            background: #0078D4;
-            margin: 4px 0;
-        }
-
-        /* Responsive menu */
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            background: white;
-            position: absolute;
-            top: 60px;
-            right: 0;
-            width: 100%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .mobile-menu a {
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .mobile-menu a:last-child {
-            border-bottom: none;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .mobile-menu.show {
-                display: flex;
-            }
+        .text-azure-primary {
+            color: #0078D7;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const hamburger = document.querySelector(".hamburger");
-            const mobileMenu = document.querySelector(".mobile-menu");
-
-            hamburger.addEventListener("click", () => {
-                mobileMenu.classList.toggle("show");
-            });
-        });
-    </script>
 </head>
 <body>
-   <header>
-        <img src="images/iaminazure.png" alt="IaminAzure Logo">
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#fun-facts">Fun Facts</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="mobile-menu">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#fun-facts">Fun Facts</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact</a>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background-color: #0081c1;">
+        <div class="container mx-auto px-6 py-4">
+            <nav class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-white">IamInAzure</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-white hover:text-gray-200 transition">About</a>
+                    <a href="#services" class="text-white hover:text-gray-200 transition">Services</a>
+                    <a href="#process" class="text-white hover:text-gray-200 transition">Our Process</a>
+                    <a href="#case-studies" class="text-white hover:text-gray-200 transition">Success Stories</a>
+                    <a href="#why-us" class="text-white hover:text-gray-200 transition">Why Us</a>
+                    <a href="#testimonials" class="text-white hover:text-gray-200 transition">Testimonials</a>
+                </div>
+                <a href="#contact" class="hidden md:block bg-white text-azure-primary font-semibold px-5 py-2 rounded-full hover:bg-gray-100 transition">Contact Us</a>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </nav>
         </div>
     </header>
-
-    <div class="container">
-        <div id="about" class="section">
-            <h2>About Us</h2>
-            <p>At IaminAzure, we specialize in Azure Integration Services and Cloud FinOps to empower businesses with seamless operations and cost optimization. With over 9 years of experience, we provide tailored solutions that deliver measurable results.</p>
-            <img src="images/about-us.jpg" alt="About Us">
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 bg-opacity-90 z-50">
+        <div class="flex justify-end p-6">
+            <button id="close-mobile-menu-button">
+                <i data-lucide="x" class="w-8 h-8 text-white"></i>
+            </button>
         </div>
-
-        <div class="numbers">
-            <div>
-                <h2>10+</h2>
-                <p>Successful Projects</p>
-            </div>
-            <div>
-                <h2>30%</h2>
-                <p>Cost Savings Achieved</p>
-            </div>
-            <div>
-                <h2>9+</h2>
-                <p>Years of Experience</p>
-            </div>
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#about" class="mobile-menu-link text-white text-2xl font-semibold">About</a>
+            <a href="#services" class="mobile-menu-link text-white text-2xl font-semibold">Services</a>
+            <a href="#process" class="mobile-menu-link text-white text-2xl font-semibold">Our Process</a>
+            <a href="#case-studies" class="mobile-menu-link text-white text-2xl font-semibold">Success Stories</a>
+            <a href="#why-us" class="mobile-menu-link text-white text-2xl font-semibold">Why Us</a>
+            <a href="#testimonials" class="mobile-menu-link text-white text-2xl font-semibold">Testimonials</a>
+            <a href="#contact" class="mobile-menu-link text-white text-2xl font-semibold">Contact Us</a>
         </div>
-
-        <div id="services" class="section">
-            <h2>Our Services</h2>
-            <p>We offer a wide range of services tailored to meet your business needs:</p>
-            <div class="services">
-                <div class="service-card">
-                    <img src="./images/api-management.png" alt="Api Management">
-                    <h3>API Management</h3>
-                    <p>Securely manage APIs with advanced features like authentication, usage monitoring, and scaling.</p>
-                </div>
-                <div class="service-card">
-                    <img src="./images/logic-apps.png" alt="Logic Apps">
-                    <h3>Logic Apps</h3>
-                    <p>Automate workflows and integrate apps with ease using Azure Logic Apps.</p>
-                </div>
-                <div class="service-card">
-                    <img src="./images/servicebus.png" alt="Service Bus">
-                    <h3>Service Bus</h3>
-                    <p>Enable reliable messaging and communication between services with Azure Service Bus.</p>
-                </div>
-                <div class="service-card">
-                    <img src="./images/money.png" alt="Cloud FinOps">
-                    <h3>Cloud FinOps</h3>
-                    <p>Optimize cloud costs, implement governance strategies, and monitor usage effectively.</p>
-                </div>
-                <div class="service-card">
-                    <img src="./images/security.png" alt="Security & Governance">
-                    <h3>Security & Governance</h3>
-                    <p>Implement robust guardrails, security policies, and ensure compliance with Azure governance tools.</p>
-                </div>
-                <div class="service-card">
-                    <img src="./images/cloudautomation.png" alt="Cloud Automations">
-                    <h3>Cloud Automation</h3>
-                    <p>Reduce manual effort with scripts, templates, and automation for recurring cloud tasks.</p>
-                </div>
-            </div>
-
-        <div id="fun-facts" class="fun-facts">
-            <h2>Fun Facts</h2>
-            <ul>
-                <li>Did you know? Azure handles over <strong>5 billion requests per day</strong> globally.</li>
-                <li>We have helped clients reduce cloud waste by <strong>up to 40%</strong> using automation.</li>
-                <li>Our team has integrated more than <strong>100 APIs</strong> for seamless workflows.</li>
-            </ul>
-        </div>
-
-        <div id="testimonials" class="testimonials">
-            <h2>What Our Clients Say</h2>
-            <p>"IaminAzure transformed our cloud operations and helped us save 35% on costs."
-<strong> John Doe </strong> </p> <p>"The integration services provided by IaminAzure were seamless and efficient. Highly recommended!"
-<strong> Sarah Lee</strong> </p> <p>"Their expertise in FinOps and Azure governance is unmatched. A trusted partner for our cloud journey."
-<strong> Michael Brown </strong> </p> </div>
-
-	        <div id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Ready to optimize your Azure cloud operations? Get in touch with us:</p>
-        <ul>
-            
-            <li>Website: <a href="https://iaminazure.in">https://iaminazure.in</a></li>
-        </ul>
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2025 IaminAzure. All rights reserved. | <a href="https://iaminazure.in">iaminazure.in</a></p>
-</footer>
 
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white pt-32 pb-20 relative overflow-hidden">
+            <!-- Background futuristic grid -->
+            <div class="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(to_bottom,white_5%,transparent_90%)]"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 animate-fade-in-down">Optimize, Automate, and Transform with IamInAzure</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200 animate-fade-in-up">We help businesses streamline their Azure cloud, cut costs, and unlock AI-powered innovation.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://cal.com/teamIamInAzure/quick-chat" target = "_blank" class="cta-button-primary text-white font-semibold px-8 py-3 rounded-full">Book a Consultation</a>
+                    <a href="#services" class="cta-button-secondary text-white font-semibold px-8 py-3 rounded-full">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white section-fade-in">
+            <div class="container mx-auto px-6 text-center">
+                <i data-lucide="cloud-cog" class="w-16 h-16 mx-auto mb-6 zen-gradient-text"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto">Blending deep Azure expertise with a Zen approach to simplify cloud challenges. We believe in clarity, efficiency, and empowering your business to achieve more with less complexity.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 section-fade-in">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Our Core Services</h2>
+                    <p class="text-lg">Tailored solutions for your cloud journey.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="cloud" class="w-12 h-12 mb-4 zen-gradient-text"></i>
+                        <h3 class="text-xl font-bold mb-2">Azure Cloud Consulting</h3>
+                        <p>From architecture design to migration and management, we ensure your Azure environment is robust and scalable.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="trending-up" class="w-12 h-12 mb-4 zen-gradient-text"></i>
+                        <h3 class="text-xl font-bold mb-2">FinOps & Cost Optimization</h3>
+                        <p>We analyze your cloud spend, identify savings, and implement FinOps best practices to maximize your ROI.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="bot" class="w-12 h-12 mb-4 zen-gradient-text"></i>
+                        <h3 class="text-xl font-bold mb-2">AI + No-Code Automation</h3>
+                        <p>Leverage the power of AI and low-code platforms to automate workflows and drive intelligent business processes.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="shield-check" class="w-12 h-12 mb-4 zen-gradient-text"></i>
+                        <h3 class="text-xl font-bold mb-2">Integration & Governance</h3>
+                        <p>Ensure your cloud ecosystem is secure, compliant, and seamlessly integrated with our governance frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Process Section -->
+        <section id="process" class="py-20 bg-white section-fade-in">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Our Streamlined Process</h2>
+                    <p class="text-lg">A clear path to cloud excellence.</p>
+                </div>
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- Dotted line for desktop -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-teal-200 -translate-y-1/2"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+                        <!-- Step 1 -->
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
+                                <i data-lucide="search" class="w-10 h-10 zen-gradient-text"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">1. Discover</h3>
+                            <p>We analyze your goals, challenges, and existing infrastructure to create a baseline for success.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
+                                <i data-lucide="drafting-compass" class="w-10 h-10 zen-gradient-text"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">2. Strategize</h3>
+                            <p>We design a tailored, future-proof Azure roadmap that aligns with your business objectives.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
+                                <i data-lucide="rocket" class="w-10 h-10 zen-gradient-text"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">3. Implement</h3>
+                            <p>Our experts execute the plan, migrating workloads and implementing automation seamlessly.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="relative">
+                            <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-white border-2 border-teal-200 rounded-full z-10 relative">
+                                <i data-lucide="repeat" class="w-10 h-10 zen-gradient-text"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">4. Optimize</h3>
+                            <p>We continuously monitor and manage your environment for peak performance and cost-efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="py-20 section-fade-in">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">Success Stories</h2>
+                    <p class="text-lg">See how we've helped businesses like yours.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Case Study Card 1 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/0078D7/FFFFFF?text=FinTech+Co." alt="FinTech Company" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">FinTech Innovator</h3>
+                            <p class="mb-4">Reduced Azure spend by 35% through a comprehensive FinOps strategy and resource optimization.</p>
+                            <a href="#contact" class="font-semibold text-teal-600 hover:text-teal-800">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Case Study Card 2 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/009688/FFFFFF?text=E-Commerce" alt="E-Commerce Platform" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                            <p class="mb-4">Automated order processing with AI and Power Automate, cutting manual effort by 80%.</p>
+                             <a href="#contact" class="font-semibold text-teal-600 hover:text-teal-800">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Case Study Card 3 -->
+                    <div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <img src="https://placehold.co/600x400/1A2B4C/FFFFFF?text=Healthcare" alt="Healthcare Provider" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Healthcare Provider</h3>
+                            <p class="mb-4">Migrated legacy systems to a secure, HIPAA-compliant Azure environment with zero downtime.</p>
+                             <a href="#contact" class="font-semibold text-teal-600 hover:text-teal-800">Learn More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 bg-white section-fade-in">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">The IamInAzure Difference</h2>
+                    <p class="text-lg">Clarity and results, delivered.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                    <!-- Feature 1 -->
+                    <div>
+                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full">
+                            <i data-lucide="award" class="w-10 h-10 text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Trust</h3>
+                        <p>Over 9 years of dedicated Microsoft Azure expertise and certified professionals you can rely on.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div>
+                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full">
+                            <i data-lucide="puzzle" class="w-10 h-10 text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Simplicity</h3>
+                        <p>We prioritize no-code/low-code solutions to empower your team and accelerate development.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div>
+                        <div class="flex items-center justify-center w-20 h-20 mx-auto mb-4 bg-teal-100 rounded-full">
+                            <i data-lucide="target" class="w-10 h-10 text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Optimization-First</h3>
+                        <p>Our mindset is always focused on optimizing for cost, performance, and security from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 section-fade-in">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-2">What Our Clients Say</h2>
+                    <p class="text-lg">Real results from real partners.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <i data-lucide="quote" class="w-8 h-8 text-teal-300 mb-4"></i>
+                        <p class="italic mb-6">"IamInAzure's expertise in FinOps was a game-changer for our budget. They are true professionals who deliver tangible results. We couldn't be happier with the partnership."</p>
+                        <div>
+                            <p class="font-bold">Jane Doe</p>
+                            <p class="text-sm text-gray-500">CTO, FinTech Innovator</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <i data-lucide="quote" class="w-8 h-8 text-teal-300 mb-4"></i>
+                        <p class="italic mb-6">"The automation solution they built for us saved hundreds of hours per month. Their team made a complex process seem simple and delivered ahead of schedule."</p>
+                        <div>
+                            <p class="font-bold">John Smith</p>
+                            <p class="text-sm text-gray-500">Head of Operations, E-commerce Platform</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white section-fade-in">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Cloud?</h2>
+                        <p class="text-lg mb-8">Let's discuss how IamInAzure can help you achieve your goals. Fill out the form or reach out to us directly.</p>
+                        <div class="space-y-4">
+                            <a href="mailto:helloazenteam@outlook.com" class="flex items-center text-gray-700 hover:text-teal-600">
+                                <i data-lucide="mail" class="w-5 h-5 mr-3"></i>
+                                <span>helloazenteam@outlook.com</span>
+                            </a>
+                        </div>
+                        <div class="flex space-x-4 mt-8">
+                            <a href="#" class="text-gray-500 hover:text-teal-600"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-teal-600"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <form>
+                            <div class="mb-5">
+                                <label for="name" class="block mb-2 text-sm font-medium">Full Name</label>
+                                <input type="text" id="name" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="John Doe" required>
+                            </div>
+                            <div class="mb-5">
+                                <label for="email" class="block mb-2 text-sm font-medium">Email Address</label>
+                                <input type="email" id="email" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="you@company.com" required>
+                            </div>
+                            <div class="mb-5">
+                                <label for="message" class="block mb-2 text-sm font-medium">Message</label>
+                                <textarea id="message" rows="4" class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="cta-button-primary text-white font-semibold w-full px-5 py-3 rounded-lg">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 IamInAzure. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        lucide.createIcons();
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('glassmorphism');
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('glassmorphism');
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Smooth scrolling for all navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                     // Close mobile menu if it's open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+
+                    const headerOffset = document.getElementById('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                } else if (targetId === '#') {
+                    // Handle clicking the logo to go to top
+                     window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+
+        // Intersection Observer for section animations
+        const sections = document.querySelectorAll('.section-fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
