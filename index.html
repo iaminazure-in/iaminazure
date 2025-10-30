@@ -140,15 +140,15 @@
 
         <!-- Static thumbnails (placeholders) that link to your YouTube channel -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <a href="https://www.youtube.com/@IamInAzure" target="_blank" class="block bg-white rounded-lg overflow-hidden shadow">
-            <img src="https://youtu.be/N8Z_hOJBQZU alt="video 1" class="w-full h-44 object-cover">
+          <a href="https://youtu.be/N8Z_hOJBQZU" target="_blank" class="block bg-white rounded-lg overflow-hidden shadow">
+            <img src="https://youtu.be/N8Z_hOJBQZU" alt="video 1" class="w-full h-44 object-cover">
             <div class="p-4">
               <h4 class="font-semibold">Building an Azure FinOps Dashboard</h4>
               <p class="text-sm text-gray-600 mt-2">A walkthrough of cost analysis and optimization techniques.</p>
             </div>
           </a>
 
-          <a href="https://www.youtube.com/@IamInAzure" target="_blank" class="block bg-white rounded-lg overflow-hidden shadow">
+          <a href="https://youtu.be/DrfdZ50SwAs" target="_blank" class="block bg-white rounded-lg overflow-hidden shadow">
             <img src="https://youtu.be/DrfdZ50SwAs" alt="video 2" class="w-full h-44 object-cover">
             <div class="p-4">
               <h4 class="font-semibold">Logic Apps: Real-world Integrations</h4>
@@ -156,7 +156,7 @@
             </div>
           </a>
 
-          <a href="https://www.youtube.com/@IamInAzure" target="_blank" class="block bg-white rounded-lg overflow-hidden shadow">
+          <a href="https://youtu.be/fbdlt_gu0gc" target="_blank" class="block bg-white rounded-lg overflow-hidden shadow">
             <img src="https://youtu.be/fbdlt_gu0gc" alt="video 3" class="w-full h-44 object-cover">
             <div class="p-4">
               <h4 class="font-semibold">Azure APIM</h4>
@@ -230,7 +230,7 @@
       const from = encodeURIComponent(document.getElementById('email').value || '');
       const subject = encodeURIComponent(document.getElementById('subject').value || 'Request from IamInAzure site');
       const message = encodeURIComponent(document.getElementById('message').value || '');
-      const body = encodeURIComponent(`From: ${name} <${from}>\n\n${decodeURIComponent(message)}`);
+      const body = encodeURIComponent(`${decodeURIComponent(message)}`);
       // update the direct email address here if you want a different inbox
       const to = 'vinod.kumar@outlook.com';
       window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
