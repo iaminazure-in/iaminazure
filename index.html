@@ -8,7 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
@@ -32,6 +32,7 @@
         <a href="#about" class="hover:text-slate-900">About</a>
         <a href="#expertise" class="hover:text-slate-900">Expertise</a>
         <a href="#roadmap" class="hover:text-slate-900">Strategy</a>
+        <a href="#patterns" class="hover:text-slate-900">Blueprints</a>
         <a href="#projects" class="hover:text-slate-900">Projects</a>
         <a href="#engagements" class="hover:text-slate-900">Services</a>
         <a href="#videos" class="hover:text-slate-900">Videos</a>
@@ -52,6 +53,7 @@
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
       <a href="#roadmap">Strategy</a>
+      <a href="#patterns">Blueprints</a>
       <a href="#projects">Projects</a>
       <a href="#engagements">Services</a>
       <a href="#videos">Videos</a>
@@ -107,7 +109,7 @@
             <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Avg Cost Reduction</p>
           </div>
           <div>
-            <p class="text-3xl font-extrabold text-teal-400">20k+</p>
+            <p class="text-3xl font-extrabold text-teal-400">2k+</p>
             <p class="text-xs text-slate-400 uppercase tracking-wider mt-1">Engineers Mentored</p>
           </div>
           <div>
@@ -257,8 +259,11 @@
       </div>
     </section>
 
+   
+    </section>
+
     <!-- Interactive Architecture Pattern Selector -->
-    <section id="patterns" class="py-16 section-fade-in bg-gray-50 border-t border-b border-gray-100">
+    <section id="patterns" class="py-16 section-fade-in bg-white">
       <div class="container mx-auto px-6 max-w-5xl">
         <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">Architectural Reference Blueprints</h2>
         <p class="text-gray-600 mb-10 text-center">Select an enterprise cloud challenge to inspect my production-tested resolution pattern.</p>
@@ -293,7 +298,7 @@
     </section>
 
     <!-- Project Highlights -->
-    <section id="projects" class="py-16 section-fade-in bg-white">
+    <section id="projects" class="py-16 section-fade-in bg-gray-50 border-t border-b border-gray-100">
       <div class="container mx-auto px-6">
         <h2 class="text-2xl font-bold mb-2">Project Highlights</h2>
         <p class="text-gray-600 mb-8">
@@ -302,7 +307,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Project 1 -->
-          <article class="bg-slate-50 p-6 rounded-lg shadow-sm border border-gray-100">
+          <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
             <h3 class="font-semibold text-lg mb-2">Azure FinOps Optimization Program</h3>
             <p class="text-gray-700 mb-4">
               Performed cloud cost assessments across multiple Azure subscriptions, implementing governance, tagging standards, rightsizing recommendations, and Reserved Instance strategies.
@@ -318,7 +323,7 @@
           </article>
 
           <!-- Project 2 -->
-          <article class="bg-slate-50 p-6 rounded-lg shadow-sm border border-gray-100">
+          <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
             <h3 class="font-semibold text-lg mb-2">Enterprise Integration Platform</h3>
             <p class="text-gray-700 mb-4">
               Designed and implemented Azure Logic Apps, Functions, APIM, and Service Bus integrations connecting ERP, CRM, and third-party systems.
@@ -334,7 +339,7 @@
           </article>
 
           <!-- Project 3 -->
-          <article class="bg-slate-50 p-6 rounded-lg shadow-sm border border-gray-100">
+          <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
             <h3 class="font-semibold text-lg mb-2">Power Platform Modernization</h3>
             <p class="text-gray-700 mb-4">
               Migrated legacy forms and workflow applications to Power Apps, Power Automate, and Dataverse with governance and lifecycle management.
@@ -350,7 +355,7 @@
           </article>
 
           <!-- Project 4 -->
-          <article class="bg-slate-50 p-6 rounded-lg shadow-sm border border-gray-100">
+          <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
             <h3 class="font-semibold text-lg mb-2">Azure DevOps & IaC Implementation</h3>
             <p class="text-gray-700 mb-4">
               Established Infrastructure as Code and CI/CD pipelines using Bicep, Terraform, Azure DevOps, and GitHub Actions.
@@ -368,70 +373,14 @@
       </div>
     </section>
 
-    <!-- Onboarding Delivery Flow -->
-    <section id="workflow" class="py-16 section-fade-in bg-gray-50 border-t border-b border-gray-100">
-      <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">My Delivery Framework</h2>
-        <p class="text-gray-600 mb-12 text-center">From initial structural discovery to automated production handover.</p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
-            <span class="absolute top-4 right-4 text-3xl font-extrabold text-slate-100 select-none">01</span>
-            <h4 class="font-bold text-slate-800 text-md mb-2 mt-2">Discovery & Audit</h4>
-            <p class="text-xs text-gray-600 leading-relaxed">Deep-dive assessment of current subscription models, IAM boundaries, billing trends, and integration bottlenecks.</p>
-          </div>
+ 
 
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
-            <span class="absolute top-4 right-4 text-3xl font-extrabold text-slate-100 select-none">02</span>
-            <h4 class="font-bold text-slate-800 text-md mb-2 mt-2">Target State</h4>
-            <p class="text-xs text-gray-600 leading-relaxed">Drafting target state blueprints using the Microsoft WAF, isolating secure landing zone topologies before pushing code.</p>
-          </div>
+ 
 
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
-            <span class="absolute top-4 right-4 text-3xl font-extrabold text-slate-100 select-none">03</span>
-            <h4 class="font-bold text-slate-800 text-md mb-2 mt-2">Declarative IaC</h4>
-            <p class="text-xs text-gray-600 leading-relaxed">Compiling environmental manifests into Azure Bicep or Terraform templates driven by automated pipelines.</p>
-          </div>
-
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm relative">
-            <span class="absolute top-4 right-4 text-3xl font-extrabold text-slate-100 select-none">04</span>
-            <h4 class="font-bold text-slate-800 text-md mb-2 mt-2">FinOps Control</h4>
-            <p class="text-xs text-gray-600 leading-relaxed">Setting up live Azure Monitor logs, configuring spending alerts, and executing technical system handover.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Architecture Core Principles (Guardrails) -->
-    <section id="principles" class="py-16 section-fade-in bg-white">
-      <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">My Engineering Guardrails</h2>
-        <p class="text-gray-600 mb-10 text-center">Every architecture I hand over is built against strict operational baselines.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="p-6 bg-slate-50 rounded-xl border border-gray-100">
-            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center mb-4"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
-            <h4 class="font-semibold text-slate-800 mb-2">Zero-Trust Baseline</h4>
-            <p class="text-xs text-gray-600 leading-relaxed">Identity is the perimeter. Every component leverages Managed Identities, Role-Based Access Control (RBAC), and centralized Key Vault storage. I avoid persistent connection strings entirely.</p>
-          </div>
-
-          <div class="p-6 bg-slate-50 rounded-xl border border-gray-100">
-            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center mb-4"><i data-lucide="code-2" class="w-5 h-5"></i></div>
-            <h4 class="font-semibold text-slate-800 mb-2">100% Declarative Code</h4>
-            <p class="text-xs text-gray-600 leading-relaxed">No manual "Click-Ops" configuration changes in the Azure Portal. If it lives in production, it is written explicitly using declarative Bicep or Terraform templates and tracked via Git repository history.</p>
-          </div>
-
-          <div class="p-6 bg-slate-50 rounded-xl border border-gray-100">
-            <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center mb-4"><i data-lucide="activity" class="w-5 h-5"></i></div>
-            <h4 class="font-semibold text-slate-800 mb-2">Built-in Observability</h4>
-            <p class="text-xs text-gray-600 leading-relaxed">An unmonitored architecture is a liability. Every workload runs connected to Azure Monitor, Application Insights, and structured Log Analytics workspaces with pre-configured thresholds for failure warnings.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Engagement Models Section -->
-    <section id="engagements" class="py-16 section-fade-in bg-gray-50 border-t border-gray-100">
+    <section id="engagements" class="py-16 section-fade-in bg-white border-t border-gray-100">
       <div class="container mx-auto px-6 max-w-5xl">
         <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">Ways to Collaborate</h2>
         <p class="text-gray-600 mb-12 text-center">Tailored engagement structures built to suit immediate infrastructure crises or long-term structural changes.</p>
@@ -486,75 +435,12 @@
       </div>
     </section>
 
-    <!-- Core Technical Ecosystem Section -->
-    <section id="tech-stack" class="py-16 section-fade-in bg-white">
-      <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="text-2xl font-bold mb-2 text-center">Core Technical Ecosystem</h2>
-        <p class="text-gray-600 mb-10 text-center">Architecting solutions natively backed by modern integration layers, cloud computing pipelines, and automation practices.</p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="p-5 bg-slate-50 rounded-xl text-center border border-gray-100 flex flex-col items-center justify-center">
-            <div class="p-2 bg-teal-50 text-teal-600 rounded-lg mb-2"><i data-lucide="git-branch" class="w-5 h-5"></i></div>
-            <div class="font-semibold text-slate-800 text-sm">Integration Layers</div>
-            <div class="text-xs text-gray-500 mt-1">Logic Apps, APIM, Functions, Service Bus</div>
-          </div>
-          <div class="p-5 bg-slate-50 rounded-xl text-center border border-gray-100 flex flex-col items-center justify-center">
-            <div class="p-2 bg-teal-50 text-teal-600 rounded-lg mb-2"><i data-lucide="database" class="w-5 h-5"></i></div>
-            <div class="font-semibold text-slate-800 text-sm">Data Engineering</div>
-            <div class="text-xs text-gray-500 mt-1">Azure Data Factory, Synapse Analytics</div>
-          </div>
-          <div class="p-5 bg-slate-50 rounded-xl text-center border border-gray-100 flex flex-col items-center justify-center">
-            <div class="p-2 bg-teal-50 text-teal-600 rounded-lg mb-2"><i data-lucide="terminal" class="w-5 h-5"></i></div>
-            <div class="font-semibold text-slate-800 text-sm">Infrastructure as Code</div>
-            <div class="text-xs text-gray-500 mt-1">Azure Bicep, Terraform, ARM Architecture</div>
-          </div>
-          <div class="p-5 bg-slate-50 rounded-xl text-center border border-gray-100 flex flex-col items-center justify-center">
-            <div class="p-2 bg-teal-50 text-teal-600 rounded-lg mb-2"><i data-lucide="cpu" class="w-5 h-5"></i></div>
-            <div class="font-semibold text-slate-800 text-sm">AI Frameworks</div>
-            <div class="text-xs text-gray-500 mt-1">LangChain, AI Copilot Agents, MCP Layer</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
-    <!-- Open Source & Repositories -->
-    <section id="open-source" class="py-16 section-fade-in bg-gray-50 border-t border-b border-gray-100">
-      <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">Open Source & Cloud Tools</h2>
-        <p class="text-gray-600 mb-10 text-center">Production-ready templates and automation tools built for the Azure and DevOps community.</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="p-6 border border-gray-200 rounded-xl hover:shadow-md transition bg-white flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2 text-slate-800 font-bold text-lg">
-                <i data-lucide="folder-git-2" class="text-teal-600 w-5 h-5"></i> azure-landingzones-bicep
-              </div>
-              <p class="text-xs text-gray-600 mt-2 leading-relaxed">Modular enterprise infrastructure landing zone accelerator built purely in Bicep. Pre-configures Hub-Spoke virtual networks, centralized log workspaces, and strict default security controls.</p>
-            </div>
-            <div class="mt-6 flex items-center justify-between text-xs text-gray-500">
-              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-indigo-600 inline-block"></span> Bicep Template</span>
-              <a href="https://github.com/VinodNallavade" target="_blank" class="text-teal-600 font-semibold hover:underline flex items-center gap-1">View Repo <i data-lucide="external-link" class="w-3 h-3"></i></a>
-            </div>
-          </div>
-
-          <div class="p-6 border border-gray-200 rounded-xl hover:shadow-md transition bg-white flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-2 text-slate-800 font-bold text-lg">
-                <i data-lucide="folder-git-2" class="text-teal-600 w-5 h-5"></i> adf-automation-scripts
-              </div>
-              <p class="text-xs text-gray-600 mt-2 leading-relaxed">PowerShell and Azure CLI utility collections designed to dynamically audit, patch, and deploy parameter updates across hundreds of concurrent Azure Data Factory pipeline triggers.</p>
-            </div>
-            <div class="mt-6 flex items-center justify-between text-xs text-gray-500">
-              <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-blue-600 inline-block"></span> PowerShell</span>
-              <a href="https://github.com/VinodNallavade" target="_blank" class="text-teal-600 font-semibold hover:underline flex items-center gap-1">View Repo <i data-lucide="external-link" class="w-3 h-3"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  
 
     <!-- Videos -->
-    <section id="videos" class="py-16 section-fade-in bg-white">
+    <section id="videos" class="py-16 section-fade-in bg-gray-50 border-t border-b border-gray-100">
       <div class="container mx-auto px-6">
         <h2 class="text-2xl font-bold mb-6">From My Channel — IamInAzure</h2>
 
@@ -592,62 +478,15 @@
       </div>
     </section>
 
-    <!-- Interactive FAQ Accordion -->
-    <section id="faq" class="py-16 section-fade-in bg-gray-50 border-t border-b border-gray-100">
-      <div class="container mx-auto px-6 max-w-3xl">
-        <h2 class="text-2xl font-bold mb-2 text-center text-slate-800">Frequently Asked Questions</h2>
-        <p class="text-gray-600 mb-8 text-center">Quick answers concerning typical consulting timelines, architecture protocols, and FinOps boundaries.</p>
 
-        <div class="space-y-4">
-          <!-- FAQ item 1 -->
-          <div class="bg-white border rounded-lg overflow-hidden">
-            <button class="w-full text-left p-4 font-semibold text-slate-800 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-              <span>How soon can we see noticeable changes from a FinOps strategy?</span>
-              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500 transition-transform"></i>
-            </button>
-            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
-              <p class="p-4 text-sm text-gray-600 leading-relaxed">
-                Immediate configurations (deleting unattached storage, identifying abandoned instances, scaling down dev tiers) often display on your cloud billing within **48–72 hours**. Long-term strategic alterations (Reserved Instances and Azure Hybrid Benefit migrations) start showing major returns on the subsequent monthly statement billing cycle.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ item 2 -->
-          <div class="bg-white border rounded-lg overflow-hidden">
-            <button class="w-full text-left p-4 font-semibold text-slate-800 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-              <span>Do you work with global teams outside your immediate timezone?</span>
-              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500 transition-transform"></i>
-            </button>
-            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
-              <p class="p-4 text-sm text-gray-600 leading-relaxed">
-                Yes. I establish clean async communications with teams globally using tools like Slack, Teams, and GitHub Enterprise. I structure explicit sync intervals for architectural milestones, sign-offs, and critical system discovery routines.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ item 3 -->
-          <div class="bg-white border rounded-lg overflow-hidden">
-            <button class="w-full text-left p-4 font-semibold text-slate-800 flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
-              <span>We use hybrid infrastructure. Can you integrate on-prem systems?</span>
-              <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500 transition-transform"></i>
-            </button>
-            <div class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-slate-50">
-              <p class="p-4 text-sm text-gray-600 leading-relaxed">
-                Absolutely. Enterprise integrations natively include linking edge hardware, legacy data centers, and web services into Azure. We secure these links using Azure ExpressRoute or Site-to-Site VPN configurations, fronted by Azure API Management (APIM) layers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-16 bg-white section-fade-in">
+    <section id="contact" class="py-16 bg-gray-50 section-fade-in">
       <div class="container mx-auto px-6 max-w-3xl">
         <h2 class="text-2xl font-bold mb-4 text-slate-800">Contact & Collaborate</h2>
         <p class="mb-4 text-gray-700">Want to work together or discuss an idea? Use the form below — it will open your email client so messages come directly to your inbox.</p>
 
-        <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
           <form id="contactForm">
             <div class="grid grid-cols-1 gap-4">
               <input id="name" name="name" required placeholder="Your name" class="p-3 border rounded w-full bg-white focus:outline-none focus:ring-1 focus:ring-teal-500" />
@@ -712,6 +551,23 @@
         content.style.maxHeight = content.scrollHeight + "px";
         if (icon) icon.style.transform = 'rotate(180deg)';
       }
+    }
+
+    // FinOps ROI Interactive Calculator Math Engine
+    function calculateSavings(val) {
+      const display = document.getElementById('spend-display');
+      const monthlyOut = document.getElementById('calc-monthly');
+      const annualOut = document.getElementById('calc-annual');
+      
+      // Format current range value to local currency string
+      display.innerText = `$${Number(val).toLocaleString()} /mo`;
+      
+      // Metric calculations based on 35% target optimization ratios
+      const monthlySaved = Math.round(val * 0.35);
+      const annualSaved = Math.round(monthlySaved * 12);
+      
+      monthlyOut.innerText = `$${monthlySaved.toLocaleString()}`;
+      annualOut.innerText = `$${annualSaved.toLocaleString()}`;
     }
 
     // Reference Pattern Switcher Data Engine
